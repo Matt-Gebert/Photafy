@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--
+SPCN by Matt Gebert
+Website for St. Pauls Caulfield North
+github.com/Matt-Gebert
+-->
+<html>
+<head>
+  <title>Location - St. Pauls Caulfield North</title>
+
+  <!--Favicon-->
+  <link rel="icon" type="image/png" href="../icon3.png">
+
+  <!-- Metas-->
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-store"/>
+
+  <!-- Facebook Meta - Used to specify what's shown when this page is linked. -->
+  <!--<meta property="og:url"                content="http://appleplugs.com" />-->
+  <!--<meta property="og:type"               content="article" />-->
+  <!--<meta property="og:title"              content="Apple Plug: Our lightest product ever." />-->
+  <!--<meta property="og:description"        content="Upgrade to iPhone 7 with Apple Plug." />-->
+  <!--<meta property="og:image"              content="http://appleplugs.com/img/fb.jpg" />-->
+
+  <!-- Twitter Meta -->
+  <!--<meta name="twitter:card"              content="summary_large_image">-->
+  <!--<meta name="twitter:site"              content="@nicerstudio">-->
+  <!--<meta name="twitter:title"             content="Apple Plug: Our lightest product ever.">-->
+  <!--<meta name="twitter:description"       content="Upgrade to iPhone 7 with Apple Plug. When we made iPhone 6 and 6s, the world wasn't ready for the future. Now, it is. Plug yourself into the future.">-->
+  <!--<meta name="twitter:image"             content="http://appleplugs.com/img/tw.jpg">-->
+
+
+  <!-- Stylesheets External -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/jquery-ui.min.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <!-- Stylesheets Internal -->
+  <link rel="stylesheet" href="../cssCustom/parallax.css">
+  <link rel="stylesheet" href="../cssCustom/banner.css">
+  <link rel="stylesheet" href="../cssCustom/text.css">
+  <!-- Stylesheets Internal Page Specific -->
+  <link rel="stylesheet" href="../cssCustom/location.css">
+
+
+
+  <!--Extra Fonts: https://fonts.google.com, also https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/-->
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">  <!-- font-family: 'Lobster', cursive; -- >
+    <!-- Scripts at the bottom! -->
+
+
+  </head>
+  <body style="margin:0;">
+    <div class="container" style="width:100%; height:100%; left:0; right:0;">
+      <!--<div class="debug">-->
+      <!--<label><input type="checkbox"> Debug</label>-->
+      <!--</div>-->
+      <div class="navbar navbar-fixed-top sticky" id="ban-container" style="position:absolute;">
+        <div class="row" id="header-row1" style="width:100%">
+          <div class="col-sm-2" id="ban-height" style="max-height:48px">
+            <img id="ban-img" class="img-responsive img-rounded pull-center" src="../src/img/banner2.png" onclick="javascript:location.href='../index.html'">
+          </div>
+          <div class="col-sm-10" id="nav-buttons" style="display:none; top:0; /*width:75%*/">
+            <!--THIS ELEMENT IS MADE TO MOVE BETWEEN HeaderRow1 and HeaderRow2-->
+            <div id="nav-button-container" style="display:table; width:100%;height:100%;"><div style="display: table-cell; position:relative; vertical-align:middle; height:100%;">
+              <div id='nav-button-container-inner'>
+                <!--<div class="col-md-2 menu-item">Home</div> WILL REPLACE WITH THE BANNER IMG.-->
+                <div class="col-sm-2 menu-item left">
+                  <i class="fa fa-lg fa-home" aria-hidden="true"></i><span>  Our Church  </span>
+                  <div class="menu-item-list-pad"><div class="menu-item-list">
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">News & Events</a>
+                  </div></div>
+                </div>
+                <div class="col-sm-2 menu-item">
+                  <i class="fa fa-lg fa-clock-o" aria-hidden="true"></i><span>  Services    </span>
+                  <div class="menu-item-list-pad"><div class="menu-item-list">
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">News & Events</a>
+                  </div></div>
+                </div>
+                <div class="col-sm-2 menu-item">
+                  <i class="fa fa-lg fa-heart-o" aria-hidden="true"></i><span>  Ministries  </span>
+                  <div class="menu-item-list-pad"><div class="menu-item-list">
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">News & Events</a>
+                  </div></div>
+                </div>
+                <div class="col-sm-2 menu-item">
+                  <i class="fa fa-lg fa-hand-peace-o" aria-hidden="true"></i><span>  Community   </span>
+                  <div class="menu-item-list-pad"><div class="menu-item-list">
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">News & Events</a>
+                  </div></div>
+                </div>
+                <div class="col-sm-2 menu-item">
+                  <i class="fa fa-lg fa-phone" aria-hidden="true"></i><span>  Contact     </span>
+                  <div class="menu-item-list-pad"><div class="menu-item-list">
+                    <a href="../html/location.html">Location</a>
+                    <!-- <a href="#">Our Team</a> -->
+                    <!-- <a href="#">News & Events</a> -->
+                  </div></div>
+                </div>
+                <div class="col-sm-2 menu-item right">
+                  <i class="fa fa-lg fa-send" aria-hidden="true"></i><span>  Resources   </span>
+                  <div class="menu-item-list-pad"><div class="menu-item-list">
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">News & Events</a>
+                  </div></div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+        <div class="row" id="header-row2" style="width:100%; margin:0; padding-top:15px">
+          <div class="col-md-12" id="top-buttons" style="right:0; display:none;"></div>
+        </div>
+      </div>
+
+
+      <!--Parallax Layers to define Slow Scrolling. Tutorial: http://keithclark.co.uk/articles/pure-css-parallax-websites/-->
+      <div class="parallax">
+
+        <!-- Back Layer deals with Images and background. -->
+        <div class="parallax_layer parallax_layer_back">
+          <!--Offset for HeaderBar.-->
+          <!--<div class="row" style="height:50px; display:inline-block"></div>-->
+          <!-- Full Width Image:-->
+          <div class="row scroll-img-container">
+            <!--<img class="img-responsive scroll-img" id="scroll-img1" src="src/img3/stalfreds.jpg" style="/*position:absolute*/">-->
+            <div id="scroll-img1"></div>
+          </div>
+          <!--<div class="row"><img class="scroll-img" id="scroll-img2" src="src/img2/life1.jpg"></div>-->
+        </div>
+
+        <!-- Front Layer deals with all text and image elements for viewing. -->
+        <div class="parallax_layer parallax_layer_front">
+          <!--Offset for HeaderBar.-->
+          <div class="row" style="height:60px; display:inline-block"></div>
+
+          <!-- GOOGLE MAPS API: -->
+          <div class="row">
+            <div style="width:80%; margin: 0 auto">
+              <h3 style="color:white">Maps</h3>
+              <div id="map"></div>
+              </div
+            </div>
+
+            <script>
+            function initMap() {
+              var stpauls = {lat: -37.8667069, lng: 145.027207};
+
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: stpauls,
+                styles: mapstyles /*Checkout JS File, you can go ham with styles!*/
+              });
+
+              var infowindow = new google.maps.InfoWindow();
+              var service = new google.maps.places.PlacesService(map);
+
+              service.getDetails({
+                placeId: 'ChIJlzq94ulp1moRL26Oef8bBhw'
+              }, function(place, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                  var marker = new google.maps.Marker({
+                    map: map,
+                    position: place.geometry.location
+                  });
+                  infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+                  //  + '<br>' +
+                  place.formatted_address + '</div>');
+                  infowindow.open(map, marker);
+                };
+              });
+            };
+
+            </script>
+
+            <!-- Can Check Specific Keys via Google APIs: https://console.developers.google.com/apis/credentials?project=cohesive-math-150801 -->
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6qloNnN2Kt9tmE7SbZPguO-V7WG_jZ3g&libraries=places&callback=initMap">
+            </script> -->
+            <!-- END MAPS API -->
+
+
+            <!-- Footer and Information: -->
+            <div class="row" style="padding-top:50px">
+              <div class="row" id="footer">
+                <div id="footerInfo">
+                  <!--Spacer-->
+                  <div class="col-md-2"></div>
+                  <!--Links-->
+                  <div class="col-sm-4">
+                    <div style="margin:0 auto; display:table">
+                      <div class="row" style="text-align:left;padding-bottom:20px;">
+                        <h2>Links</h2>
+                      </div>
+                      <div class="row" style="text-align:left">
+                        <table>
+                          <tr>
+                            <th><i class="fa fa-2x fa-home" aria-hidden="true" style="padding-left:30px"></i></th>
+                            <th><h4><a href="#" style="padding-left:30px">Home</a></h4></th>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="row" style="padding-bottom:15px;"></div>
+                    </div>
+                  </div>
+                  <!--Contact information-->
+                  <div class="col-sm-4">
+                    <div style="margin:0 auto; display:table">
+                      <div class="row" style="text-align:left;padding-bottom:20px;">
+                        <h2>Get In Touch</h2>
+                      </div>
+                      <div class="row" style="text-align:left; width:100%">
+                        <table>
+                          <tr>
+                            <th><i style="padding-left:20px" class="fa fa-lg fa-envelope" aria-hidden="true"></i></th>
+                            <th><h4><a style="padding-left:20px" href="mailto:info@stpaulscaulfieldnorth.com.au">info@stpaulscaulfieldnorth.com.au</a></h4></th>
+                          </tr>
+                          <tr>
+                            <th><i style="padding-left:20px;" class="fa fa-lg fa-map" aria-hidden="true"></i></th>
+                            <th><h4><a style="padding-left:20px;" href="#">530 Dandenong Rd, Caulfield North</a></h4><h4><a style="padding-left:20px;" href="#">3161 VIC, Australia</a></h4></th>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="row" style="padding-bottom:15px;"></div>
+                    </div>
+                  </div>
+                  <!--Spacer-->
+                  <div class="col-md-2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-left:0;">
+              <p class="pull-left" style="padding-left:20px; color:#FFFFFF">
+                <a href="http://github.com/Matt-Gebert/SPCN">SPCN</a> by Matt Gebert<br>
+                mattheuu.gebert@gmail.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Scripts-->
+      <script src="../js/bootstrap.min.js"></script>
+      <script src="../js/jquery-3.1.0.min.js"></script>
+      <script src="../js/jquery-ui.min.js"></script>
+      <script src="../js/jquery.mousewheel.min.js"></script>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <!--Specific Page Script -->
+      <script src="../js/staticsubpage.js"></script>
+      <!-- <script src="../apis/googlemapskey.js"></script> -->
+    </div>
+  </body>
+  </html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!--
+SPCN by Matt Gebert
+Website for St. Pauls Caulfield North
+github.com/Matt-Gebert
+-->
+<html>
+<head>
+  <title>St. Pauls Caulfield North</title>
+
+  <!--Favicon-->
+  <link rel="icon" type="image/png" href="icon3.png">
+
+  <!-- Metas-->
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-store"/>
+
+  <!-- Facebook Meta - Used to specify what's shown when this page is linked. -->
+  <!--<meta property="og:url"                content="http://appleplugs.com" />-->
+  <!--<meta property="og:type"               content="article" />-->
+  <!--<meta property="og:title"              content="Apple Plug: Our lightest product ever." />-->
+  <!--<meta property="og:description"        content="Upgrade to iPhone 7 with Apple Plug." />-->
+  <!--<meta property="og:image"              content="http://appleplugs.com/img/fb.jpg" />-->
+
+  <!-- Twitter Meta -->
+  <!--<meta name="twitter:card"              content="summary_large_image">-->
+  <!--<meta name="twitter:site"              content="@nicerstudio">-->
+  <!--<meta name="twitter:title"             content="Apple Plug: Our lightest product ever.">-->
+  <!--<meta name="twitter:description"       content="Upgrade to iPhone 7 with Apple Plug. When we made iPhone 6 and 6s, the world wasn't ready for the future. Now, it is. Plug yourself into the future.">-->
+  <!--<meta name="twitter:image"             content="http://appleplugs.com/img/tw.jpg">-->
+
+
+  <!-- Stylesheets External -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Stylesheets Internal -->
+  <link rel="stylesheet" href="cssCustom/parallax.css">
+  <link rel="stylesheet" href="cssCustom/banner.css">
+  <link rel="stylesheet" href="cssCustom/text.css">
+  <!-- Stylesheets Internal Page Specific -->
+  <link rel="stylesheet" href="cssCustom/index.css">
+
+
+  <!--Extra Fonts: https://fonts.google.com, also https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/-->
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">  <!-- font-family: 'Lobster', cursive; -- >
+  <!-- Scripts at the bottom! -->
+</head>
+
+
+<!-- BODY! -->
+<body style="margin:0;">
+  <div class="container" style="width:100%; height:100%; left:0; right:0;">
+    <!--<div class="debug">-->
+    <!--<label><input type="checkbox"> Debug</label>-->
+    <!--</div>-->
+    <div class="navbar navbar-fixed-top sticky" id="ban-container" style="position:absolute;">
+      <div class="row" id="header-row1" style="width:100%">
+        <div class="col-sm-2" id="ban-height" style="max-height:48px">
+          <img id="ban-img" class="img-responsive img-rounded pull-center" src="src/img/banner2.png" onclick="javascript:location.href='#'">
+        </div>
+        <div class="col-sm-10" id="nav-buttons" style="display:none; top:0; /*width:75%*/">
+          <!--THIS ELEMENT IS MADE TO MOVE BETWEEN HeaderRow1 and HeaderRow2-->
+          <div id="nav-button-container" style="display:table; width:100%;height:100%;"><div style="display: table-cell; position:relative; vertical-align:middle; height:100%;">
+            <div id='nav-button-container-inner'>
+              <!--<div class="col-md-2 menu-item">Home</div> WILL REPLACE WITH THE BANNER IMG.-->
+              <div class="col-sm-2 menu-item left">
+                <i class="fa fa-lg fa-home" aria-hidden="true"></i><span>  Our Church  </span>
+                <div class="menu-item-list-pad"><div class="menu-item-list">
+                  <a href="#">About Us</a>
+                  <a href="#">Our Team</a>
+                  <a href="#">News & Events</a>
+                </div></div>
+              </div>
+              <div class="col-sm-2 menu-item">
+                <i class="fa fa-lg fa-clock-o" aria-hidden="true"></i><span>  Services    </span>
+                <div class="menu-item-list-pad"><div class="menu-item-list">
+                  <a href="#">About Us</a>
+                  <a href="#">Our Team</a>
+                  <a href="#">News & Events</a>
+                </div></div>
+              </div>
+              <div class="col-sm-2 menu-item">
+                <i class="fa fa-lg fa-heart-o" aria-hidden="true"></i><span>  Ministries  </span>
+                <div class="menu-item-list-pad"><div class="menu-item-list">
+                  <a href="#">About Us</a>
+                  <a href="#">Our Team</a>
+                  <a href="#">News & Events</a>
+                </div></div>
+              </div>
+              <div class="col-sm-2 menu-item">
+                <i class="fa fa-lg fa-hand-peace-o" aria-hidden="true"></i><span>  Community   </span>
+                <div class="menu-item-list-pad"><div class="menu-item-list">
+                  <a href="#">About Us</a>
+                  <a href="#">Our Team</a>
+                  <a href="#">News & Events</a>
+                </div></div>
+              </div>
+              <div class="col-sm-2 menu-item">
+                <i class="fa fa-lg fa-phone" aria-hidden="true"></i><span>  Contact     </span>
+                <div class="menu-item-list-pad"><div class="menu-item-list">
+                  <a href="html/location.html">Location</a>
+                  <!-- <a href="#">Our Team</a> -->
+                  <!-- <a href="#">News & Events</a> -->
+                </div></div>
+              </div>
+              <div class="col-sm-2 menu-item right">
+                <i class="fa fa-lg fa-send" aria-hidden="true"></i><span>  Resources   </span>
+                <div class="menu-item-list-pad"><div class="menu-item-list">
+                  <a href="#">About Us</a>
+                  <a href="#">Our Team</a>
+                  <a href="#">News & Events</a>
+                </div></div>
+              </div>
+            </div>
+          </div></div>
+        </div>
+      </div>
+      <div class="row" id="header-row2" style="width:100%; margin:0; padding-top:15px">
+        <div class="col-md-12" id="top-buttons" style="right:0; display:none;"></div>
+      </div>
+    </div>
+
+
+    <!--Parallax Layers to define Slow Scrolling. Tutorial: http://keithclark.co.uk/articles/pure-css-parallax-websites/-->
+    <div class="parallax">
+
+      <!-- Back Layer deals with Images and background. -->
+      <div class="parallax_layer parallax_layer_back">
+        <!--Offset for HeaderBar.-->
+        <!--<div class="row" style="height:50px; display:inline-block"></div>-->
+        <!-- Full Width Image:-->
+        <div class="row scroll-img-container">
+          <!--<img class="img-responsive scroll-img" id="scroll-img1" src="src/img3/stalfreds.jpg" style="/*position:absolute*/">-->
+          <div id="scroll-img1"></div>
+        </div>
+        <!--<div class="row"><img class="scroll-img" id="scroll-img2" src="src/img2/life1.jpg"></div>-->
+      </div>
+
+      <!-- Front Layer deals with all text and image elements for viewing. -->
+      <div class="parallax_layer parallax_layer_front">
+        <!--Offset for HeaderBar.-->
+        <div class="row" style="height:400px; display:inline-block"></div>
+        <!--Welcome Message-->
+        <div class="row">
+          <div style="width:60%; margin: 0 auto">
+            <div class="white-box">
+              <div class="white-box-pad">
+                <div style="width:80%; margin: 0 auto;">
+                  <h1>Welcome to <span style="color:#00AABA">St. Paul's</span> Anglican Church</h1>
+                </div>
+                <div style="width:80%; margin-right: 0; display:block;">
+                  <p style="">We're about Jesus. St Paul’s Caulfield North is an Anglican Church which is Christ centred, committed to the ministry he calls us to, and the care of one another.<br>
+                    We seek to be relevant and to meet people at their point of need. Whether you are looking for a new church or are just visiting, you're most welcome to join us.<br><br>
+                    And no, this image behind is not our Church, we just don't have a good enough image yet to display something decent! We invisige an image like this one (of St. Alfreds, Blackburn North).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Service Times-->
+          <div class="row" style="height:300px"></div>
+          <div style="width:90%; margin:0 auto;">
+            <div class=" white-box">
+              <div class="white-box-pad">
+                <div class="row" style="margin:0">
+                  <div style="text-align:center">
+                    <h1 style="font-family: 'Lobster', cursive;">Service Times</h1>
+                  </div>
+                </div>
+                <div class="row" style="margin:0">
+                  <div class="col-md-4 service">
+                    <div style="width:90%; border:#AAAAAA 1px solid;border-radius:8px; margin:0 auto; background-color:rgba(0,139,147,0.1); height:100%">
+                      <div class="row" style="margin:0; text-align:center"><h3>Contemporary Worship</h3></div>
+                      <div class="row" style="margin:0; text-align:right; padding-right:10px; color:rgb(0,70,133);"><p>10:15am Sundays</p></div>
+                      <div class="row" style="margin:0">
+                        <img src="src/img/cafe1.jpg" style="width:100%">
+                      </div>
+                      <div class="row" style="margin:0; text-align:justify; padding:20px"><p>
+
+                      </p></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 service">
+                    <div style="width:90%; border:#AAAAAA 1px solid;border-radius:8px; margin:0 auto; background-color:rgba(0,139,147,0.1); height:100%">
+                      <div class="row" style="margin:0; text-align:center"><h3>530@530 (Evening Service)</h3></div>
+                      <div class="row" style="margin:0; text-align:right; padding-right:10px; color:rgb(0,70,133);"><p>5:30pm Sundays</p></div>
+                      <div class="row" style="margin:0">
+                        <img src="src/img/young-adults.jpg" style="width:100%">
+                      </div>
+                      <div class="row" style="margin:0; text-align:justify; padding:20px"><p>
+                        Our 5.30pm Service is
+                      </p></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 service">
+                    <div style="width:90%; border:#AAAAAA 1px solid;border-radius:8px; margin:0 auto; background-color:rgba(0,139,147,0.1); height:100%">
+                      <div class="row" style="margin:0; text-align:center"><h3>Healing Service</h3></div>
+                      <div class="row" style="margin:0; text-align:right; padding-right:10px; color:rgb(0,70,133);"><p>10:00am Thursdays</p></div>
+                      <div class="row" style="margin:0">
+                        <img src="src/img/Healing-service1.jpg" style="width:100%">
+                      </div>
+                      <div class="row" style="margin:0; text-align:justify; padding:20px"><p>
+                        Our mission is to bring healing and restoration in body, mind and spirit. As healing was a large part of Jesus' ministry as well as the early apostles
+                        we believe in God's ability to make these things possible. <br>
+                        The Healing Service runs at 10.00am Thursdays (February to November), and offers restoration through praise and worship, teaching,
+                        the laying on of hands and intercessory prayer.<br>
+                        Our vicar, Rev. Howard Langmead, along with guest speakers during the year, will preach on healing and related topics.<br>
+                        We have a heavy focus on Prayer Ministry, which is offered to any who attend our services.
+                      </p></div>
+                    </div>
+                  </div>
+                </div>
+                <!--Spacing-->
+                <div class="row" style="margin:0; padding-top:30px"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--Facebook and Twitter Elements-->
+        <!--<div class="row">-->
+        <!--<div class="col-md-10">-->
+        <!--</div>-->
+
+        <!--<div class="col-md-2">-->
+        <!--&lt;!&ndash; Facebook: Note there's a better way to do it if online. &ndash;&gt;-->
+        <!--<div class="row pull-right" style="padding: 10px">-->
+        <!--<iframe-->
+        <!--src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSt-
+        Pauls-Caulfield-North-Church-1176614632402200%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"-->
+        <!--width=inherit-->
+        <!--height=500-->
+        <!--style="border:none;overflow:hidden"-->
+        <!--scrolling="no"-->
+        <!--frameborder="0"-->
+        <!--allowTransparency="true">-->
+        <!--</iframe>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; Twitter API &ndash;&gt;-->
+        <!--<div class="row pull-right" style="padding: 10px; padding-top:0px;">-->
+        <!--<a 	class="twitter-timeline"-->
+        <!--href="https://twitter.com/MattGebert"-->
+        <!--data-width=340px-->
+        <!--data-height=500>-->
+        <!--Tweets by Matt Gebert-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!-- Footer and Information: -->
+
+        <div class="row" style="padding-top:50px">
+          <div class="row" id="footer">
+            <div id="footerInfo">
+              <!--Spacer-->
+              <div class="col-md-2"></div>
+              <!--Links-->
+              <div class="col-sm-4">
+                <div style="margin:0 auto; display:table">
+                  <div class="row" style="text-align:left;padding-bottom:20px;">
+                    <h2>Links</h2>
+                  </div>
+                  <div class="row" style="text-align:left">
+                    <table>
+                      <tr>
+                        <th><i class="fa fa-2x fa-home" aria-hidden="true" style="padding-left:30px"></i></th>
+                        <th><h4><a href="#" style="padding-left:30px">Home</a></h4></th>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="row" style="padding-bottom:15px;"></div>
+                </div>
+              </div>
+              <!--Contact information-->
+              <div class="col-sm-4">
+                <div style="margin:0 auto; display:table">
+                  <div class="row" style="text-align:left;padding-bottom:20px;">
+                    <h2>Get In Touch</h2>
+                  </div>
+                  <div class="row" style="text-align:left; width:100%">
+                    <table>
+                      <tr>
+                        <th><i style="padding-left:20px" class="fa fa-lg fa-envelope" aria-hidden="true"></i></th>
+                        <th><h4><a style="padding-left:20px" href="mailto:info@stpaulscaulfieldnorth.com.au">info@stpaulscaulfieldnorth.com.au</a></h4></th>
+                      </tr>
+                      <tr>
+                        <th><i style="padding-left:20px" class="fa fa-lg fa-map" aria-hidden="true"></i></th>
+                        <th><h4><a style="padding-left:20px;" href="#">530 Dandenong Rd, Caulfield North</a></h4><h4><a style="padding-left:20px;" href="#">3161 VIC, Australia</a></h4></th>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="row" style="padding-bottom:15px;"></div>
+                </div>
+              </div>
+              <!--Spacer-->
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-left:0;">
+          <p class="pull-left" style="padding-left:20px; color:#FFFFFF">
+            <a href="http://github.com/Matt-Gebert/SPCN">SPCN</a> by Matt Gebert<br>
+            mattheuu.gebert@gmail.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Scripts-->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.mousewheel.min.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <!--Specific Page Script -->
+  <script src="js/index.js"></script>
+
+</body>
+</html>

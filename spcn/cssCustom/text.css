@@ -1,0 +1,24 @@
+
+/*To make sure all links are single line text.*/
+a {
+  white-space: nowrap
+}
+
+h1{
+  white-space:nowrap;
+}
+h2{
+  white-space:nowrap;
+}
+h3{
+  /*white-space:nowrap;*/
+}
+h4{
+  white-space:nowrap;
+}
+h5{
+  white-space:nowrap;
+}
+h6{
+  white-space:nowrap;
+}

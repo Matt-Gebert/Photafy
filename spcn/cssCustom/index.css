@@ -1,0 +1,104 @@
+/*Root Colour Definitions*/
+:root{
+  --green1:#D8EADC;
+  --green2:#C9E2C9;
+  --background-blue:#132C3D
+  --bord-tot:
+}
+
+
+* {margin:0;}
+/*BODY:*/
+body {
+  background:  var(--background-blue);
+  /*background-image: url("../src/img/page.png");*/
+  /*overflow-X:hidden;*/
+  /*overflow-Y:scroll;*/
+  overflow:hidden;
+}
+
+/* General Page Elements*/
+/*White box to put text in.*/
+div.white-box {
+  background-color:rgba(255,255,255,0.85);
+  border-radius:10px
+}
+/*Padding inside white box to place text & images*/
+div.white-box-pad {
+  padding:20px
+}
+
+/*Text Within a white box.*/
+div.white-box p {
+  font-family:
+}
+
+div.white-box h1 {
+  font-family;
+}
+
+
+/*Service Times*/
+div.service {
+  /*Primarily For Scaling on small devices*/
+  padding-top:10px;
+  padding-bottom:10px;
+  height:100%;
+}
+
+
+
+
+/*SCROLLING IMAGES:*/
+
+div.scroll-img-container{
+  overflow:hidden;
+  height:100%;
+  position: relative;
+}
+
+div#scroll-img1 {
+  background-image: url("../src/img3/stalfreds.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height:100%;
+}
+
+
+img.scroll-img{
+  /*width: 100%;*/
+
+  left:-1000%;
+  right:1000%;
+  top:-1000%;
+  bottom:-1000%;
+  min-height:100%;
+  /*min-width:100%;
+  TODO: Fix scaled width/height profile*/
+  margin: 0 auto;
+
+  opacity:0.7;
+}
+
+
+
+
+/*Define Fading Images:*/
+#cf {
+  position:relative;
+  margin:0 auto;
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf img.top:hover {
+  opacity:0;
+}

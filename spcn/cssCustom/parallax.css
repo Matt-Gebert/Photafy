@@ -1,0 +1,67 @@
+/*PARALLAX FRAMES:*/
+            .parallax {
+                position: fixed;
+                width:100%;
+                left:0;
+                margin:0;
+                perspective: 1px;
+                height: 100vh;
+                background:#132C3D;
+
+                overflow: auto;
+                overflow-x: hidden;
+                /*overflow-y: hidden;*/
+                overflow-y: visible;
+                /*padding-right:-15px;*/
+            }
+            .parallax_layer {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width:100%;
+                height:100%;
+            }
+            .parallax_layer_front {
+                transform: translateZ(0);
+            }
+            .parallax_layer_back {
+                /*  Scale Factors calculated by 1+(translateZ * -1) / perspective
+                    Increasing the translate Z value increases the layer speed.
+                */
+
+                transform: translateZ(-1px) scale(2);
+                /*overflow-Y:hidden;*/
+                /*overflow-X:hidden;*/
+            }
+
+
+/*Debugging?:*/
+            .debug {
+                position: fixed;
+                top: 0;
+                left: .5em;
+                z-index: 200000;
+                background: rgba(0,0,0,.85);
+                color: #fff;
+                padding: .5em;
+                border-radius: 0 0 5px 5px;
+              }
+              .debug-on .parallax {
+                /*background-color:#FFFFFF;*/
+             }
+
+             .debug-on .parallax_layer {
+                box-shadow: 0 0 0 2px #000;
+                opacity: 0.9;
+             }
+
+              .debug-on .parallax_layer_back {
+                /*-webkit-transform: translate3d(400px, 0, -5px) rotateY(40deg);*/
+                transform: translate3d(-40px, 0, 0px) rotateY(60deg);
+              }
+
+              .debug-on .parallax_layer_front {
+                /*-webkit-transform: translate3d(800px, 0, -5px) rotateY(40deg);*/
+                transform: translate3d(-40px, 0, 0px) rotateY(-60deg);
+              }
