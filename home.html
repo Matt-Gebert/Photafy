@@ -2,8 +2,9 @@
 <head>
   <title>Matt Gebert</title>
 
-  <!--Favicon-->
+  <!-- Favicon -->
   <!-- <link rel="icon" type="image/png" href="icon3.png"> -->
+  <link rel="icon" type="image/png" href="icon/mg_icon.png"/>
 
   <!-- Metas-->
   <meta charset="utf-8">
@@ -32,7 +33,6 @@
   <link rel="stylesheet" href="home.css"/>
   <!-- Stylesheets Internal Page Specific -->
 
-
   <!--Extra Fonts: https://fonts.google.com, also https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/-->
   <link href="https://fonts.googleapis.com/css?family=Electrolize|Josefin+Slab|Share+Tech+Mono" rel="stylesheet">
   <!-- Unused: Nunito+Sans+Bold | Share+Tech+Mono | -->
@@ -60,14 +60,25 @@
       <div class="row space2"></div>
       <div class="row links">
         <div class="col-md-2"></div>
-        <div class="col-md-8">
-          <h3>
-            <i class="fa fa-book"></i><span>Christian</span>
-            <i class="fa fa-flask"></i><span>Physicist</span>
-            <i class="fa fa-headphones"></i><span>Musician</span>
-          </h3>
+        <div class="col-md-8 ">
+            <div class="col-sm-3 subpagelink" id="christian" onclick="subpg(0)">
+              <h3><i class="fa fa-book"></i><span>Christian</span></h3>
+            </div>
+            <div class="col-sm-3 subpagelink" id="physicist" onclick="subpg(1)">
+              <h3><i class="fa fa-flask"></i><span>Physicist</span></h3>
+            </div>
+            <div class="col-sm-3 subpagelink" id="musician" onclick="subpg(2)">
+              <h3><i class="fa fa-headphones"></i><span>Musician</span></h3>
+            </div>
+            <div class="col-sm-3">
+
+            </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-2 linkbar sidebars"></div>
+      </div>
+      <div class="row links underline"></div>
+      <div class="row subpage">
+
       </div>
     </div>
     <!-- BACKGROUND -->
@@ -87,6 +98,9 @@
 
   <!--Specific Page Script -->
   <script src="home.js"></script>
+
+  <!-- Custom Library -->
+  <script src="customFns.js"></script>
 
 </body>
 </html>
