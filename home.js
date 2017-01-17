@@ -52,11 +52,14 @@ function subpg(pgnum) {
     //Generate specific page.
     $('.underline').css('background-color','rgba(255,255,255,0.8)');
     $('.subpage').css('display','block');
+    $('.subpage').animate({opacity:1}, 500);
     scrollTillTop('.links','.information');
+
   } else {
     //Return to default view.
     $('.underline').css('background-color','rgba(0,0,0,0)');
     scrollTillTop('.space','.information');
+    $('.subpage').animate({opacity:0}, 1000, function(){$(this).css('display','none');})
   }
 
 };

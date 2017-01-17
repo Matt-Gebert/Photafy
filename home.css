@@ -116,7 +116,82 @@ body {
 
 .subpage {
   display:none;
+  opacity:0;
 }
+
+.subpage .loadmask{
+  display:table;
+  position:absolute;
+  width:100%;
+  height: 100%;
+  text-align: center;
+}
+
+.algnMiddle {
+  display:table-cell;
+  vertical-align: middle;
+}
+
+.algnInner {
+  margin-left: auto;
+  margin-right: auto;
+  width:100%;
+}
+
+.subpage .loadimg {
+  height:100px;
+  width:100px;
+  margin:0 auto;
+}
+
+.subpage .content{
+  display:none;
+  position: absolute;
+  width:inherit;
+  height:100%;
+}
+
+
+/*--------------------------- Rotating SVG ----------------------------*/
+
+#piece1 {
+  animation-name: ckw;
+  animation-duration: 1s;
+  transform-origin: center;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#piece2 {
+  animation-name: ckw;
+  animation-duration: 2s;
+  transform-origin: center;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#piece3 {
+  animation-name: ckw;
+  animation-duration: 3.2s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  animation-timing-function: linear;
+}
+#piece4 {
+  animation-name: ckw;
+  animation-duration: 5s;
+  transform-origin: center;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes ckw {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 /*-------------------------------------------------------------------------*/
 /*---------------------- BACKGROUND ELEMENTS ------------------------------*/

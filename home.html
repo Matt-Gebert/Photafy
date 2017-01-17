@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="spcn/css/bootstrap.min.css" />
   <link rel="stylesheet" href="spcn/css/jquery-ui.min.css" />
   <link rel="stylesheet" href="spcn/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="loading/pie.css"/>  <!-- For Loading Icon -->
   <!-- Stylesheets Internal -->
   <link rel="stylesheet" href="home.css"/>
   <!-- Stylesheets Internal Page Specific -->
@@ -61,46 +62,59 @@
       <div class="row links">
         <div class="col-md-2"></div>
         <div class="col-md-8 ">
-            <div class="col-sm-3 subpagelink" id="christian" onclick="subpg(0)">
-              <h3><i class="fa fa-book"></i><span>Christian</span></h3>
-            </div>
-            <div class="col-sm-3 subpagelink" id="physicist" onclick="subpg(1)">
-              <h3><i class="fa fa-flask"></i><span>Physicist</span></h3>
-            </div>
-            <div class="col-sm-3 subpagelink" id="musician" onclick="subpg(2)">
-              <h3><i class="fa fa-headphones"></i><span>Musician</span></h3>
-            </div>
-            <div class="col-sm-3">
+          <div class="col-sm-3 subpagelink" id="christian" onclick="subpg(0)">
+            <h3><i class="fa fa-book"></i><span>Christian</span></h3>
+          </div>
+          <div class="col-sm-3 subpagelink" id="physicist" onclick="subpg(1)">
+            <h3><i class="fa fa-flask"></i><span>Physicist</span></h3>
+          </div>
+          <div class="col-sm-3 subpagelink" id="musician" onclick="subpg(2)">
+            <h3><i class="fa fa-headphones"></i><span>Musician</span></h3>
+          </div>
+          <div class="col-sm-3">
 
-            </div>
+          </div>
         </div>
         <div class="col-md-2 linkbar sidebars"></div>
       </div>
       <div class="row links underline"></div>
       <div class="row subpage">
-
+        <div class="loadmask">
+          <div class="algnMiddle">
+            <div class="algnInner">
+              <svg class="loadimg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-pie">
+                <rect x="0" y="0" width="100" height="100" fill="#ffffff" class="bk" style="fill: rgba(255, 255, 255, 0);"></rect>
+                <path id="piece1" d="M0 50A50 50 0 0 1 50 0L50 50L0 50" fill="#000" opacity="0.5" style="fill: rgb(148, 169, 206);"></path>
+                <path id="piece2" d="M50 0A50 50 0 0 1 100 50L50 50L50 0" fill="#000" opacity="0.5" style="fill: rgb(102, 115, 149);"></path>
+                <path id="piece3" d="M100 50A50 50 0 0 1 50 100L50 50L100 50" fill="#000" opacity="0.5" style="fill: rgb(41, 38, 100);"></path>
+                <path id="piece4" d="M50 100A50 50 0 0 1 0 50L50 50L50 100" fill="#000" opacity="0.5" style="fill: rgb(245, 244, 250);"></path>
+              </svg>
+            </div>
+          </div>
       </div>
+      <div class="content"></div>
     </div>
-    <!-- BACKGROUND -->
-    <div class="background">
-      <svg class="chart">
-      </svg>
-    </div>
-
-
   </div>
-  <!--Scripts-->
-  <script src="spcn/js/bootstrap.min.js"></script>
-  <script src="spcn/js/jquery-3.1.0.min.js"></script>
-  <script src="spcn/js/jquery-ui.min.js"></script>
-  <script src="spcn/js/d3.min.js"></script>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <!-- BACKGROUND -->
+  <div class="background">
+    <svg class="chart">
+    </svg>
+  </div>
 
-  <!--Specific Page Script -->
-  <script src="home.js"></script>
 
-  <!-- Custom Library -->
-  <script src="customFns.js"></script>
+</div>
+<!--Scripts-->
+<script src="spcn/js/bootstrap.min.js"></script>
+<script src="spcn/js/jquery-3.1.0.min.js"></script>
+<script src="spcn/js/jquery-ui.min.js"></script>
+<script src="spcn/js/d3.min.js"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<!--Specific Page Script -->
+<script src="home.js"></script>
+
+<!-- Custom Library -->
+<script src="customFns.js"></script>
 
 </body>
 </html>
