@@ -147,7 +147,7 @@ body {
   margin:0 auto;
 }
 
-.subpage #content{
+.subpage .content{
   display:none;
   position: absolute;
   width:inherit;

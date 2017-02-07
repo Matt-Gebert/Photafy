@@ -17,17 +17,16 @@ var data = [4,8,15,18,23,42];
 //----------------Menu bar for home page ------------------
 
 var crnt_pg = -1; //No page selected
-var ids = ['christian', 'physicist', 'musician'];
+var ids = ['christian', 'physicist', 'musician','other'];
 function subpg(pgnum) {
-
-  //First, makes div static on hover, then sets static colors.
+  //First, makes subpage title div static on hover, then sets static colors.
   if (pgnum != crnt_pg) {
     $('#' + ids[pgnum]).unbind('mouseenter').unbind('mouseleave')
     .css('background-color','rgba(255,255,255,0.8)')
     .children().children().css('color','#114455');
   }
 
-  //Secondly, reset old page element if selected.
+  //Secondly, reset old page header if already selected.
   if (crnt_pg !== -1) {
     $('#' + ids[crnt_pg]).hover(function(){
       $(this).css('background-color','rgba(255,255,255,0.8)')
@@ -47,6 +46,12 @@ function subpg(pgnum) {
     crnt_pg = pgnum;
   }
 
+  //Fourthly load subpage elements of new page:
+  $('.category#cat_'+ids[pgnum]).load('/'+ids[pgnum]+'/index.html');
+  alert('');
+  // fill_page_options(pgnum);
+
+
   //Lastly, change view between frontpage and specific page.
   if (crnt_pg != -1) {
     //Generate specific page.
@@ -65,53 +70,30 @@ function subpg(pgnum) {
 };
 
 // --------------------- Selection Between pages --------------------------
-var refs = ['primsalg', '15puzzle']
-var names = ['Prims Algorithm', '14-15 Puzzle'];
-var crnt_phys_pg = -1;
-function fill_page_options(){
-  //Reset Element Contents:
-  $('.subpagemenu').html("");
+var refs =  {
+  christian:[],
+  physicist:[],
+  musician:[],
+  other:['primsalg', '15puzzle']
+};
 
-  for (var i = 0; i<refs.length; i++) {
-    // document.getElementByClassName("subpagemenu")[0].innerHTML = "Test";
-    $('.subpagemenu').append('<div class="row menuoption" id="'+refs[i]+'" onclick="load_page('+i+')"><span>'+names[i]+'</span></div>');
-    //  += '<div class="row menuoption">'+names[i]+'</div>'
-  }
+var names = {
+  christian:[],
+  physicist:[],
+  musician:[],
+  other:['Prims Algorithm', '14-15 Puzzle']
+};
+
+var pg_nums = { //TODO: Implement page tracking for each tab, and don't refresh on tab.
+  christian:-1,
+  physicist:-1,
+  musician:-1,
+  other:-1
 }
 
-function load_page(i) {
-  //Unmark if different page num.
-  if (i != crnt_phys_pg) {
-    if (crnt_phys_pg!=-1) {
-      $('#'+refs[crnt_phys_pg]).hover(function(){
-        $(this).css('background-color','rgba(255,255,255,0.8)').css('color','#114455');
-      }, function(){
-        $(this).css('background-color','rgba(0,0,0,0)').css('color','#FFFFFF');
-      }).mouseout();
-    }
+var crnt_pg = -1;
 
-    // alert(refs[i]);
-    //Mark Selection:
-    $('#' + refs[i]).unbind('mouseenter').unbind('mouseleave')
-                    .css('background-color','rgba(255,255,255,0.8)')
-                    .css('color','#114455');
-    //Update Tracker
-    crnt_phys_pg = i;
-  }
 
-  //Hide Current Content:
-  $('#content').css('dispaly','none').css('opacity',0);
-  //Bring up loading mask.
-  $('.loadmask').css('display','table').animate({opacity:1}, 400, function(){
-    //Start Loading new page
-    $("#content").load('comp_sci_apps/'+refs[i]+'/index.html', function(){
-      //Upon load, remove mask
-      $('#content').css('display','block').css('opacity',1);
-      $('.loadmask').delay(200).animate({opacity:0}, 1000, function(){$(this).css('display','none');})
-    });
-  });
-
-}
 
 
 
@@ -122,6 +104,11 @@ $(document).ready(function() {
   $('.subpage').css('height', subpageHeight + 'px');
 
   //Temp: Setup Subpage Options - this should be done by database.
-  fill_page_options();
+  // fill_page_options();
 
 })
+
+//TODO: implement resize functionality for scrolling and scaling elements
+function resize_event() {
+
+}
