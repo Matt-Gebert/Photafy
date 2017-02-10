@@ -38,21 +38,21 @@ function tabled(url, refs, names, category) {
       crnt_pg = i;
     }
 
+    //Create vars to escape namespace:
+    var path = this.path;
+    var refs = this.refs;
+    var cat = this.category;
+
     //2. Hide Current Content:
-    $('#'+this.category+'_content').css('dispaly','none').css('opacity',0);
+    $('#'+cat+'_content').css('dispaly','none').css('opacity',0);
     //Bring up loading mask.
     $('.loadmask').css('display','table').animate({'opacity':1}, 400, function(){
       //Start Loading new page
-      // alert(''.append(this.path,this.refs[i],'/index.html'));
-      alert(this.path);
-      // alert(this.refs[i]);
-      // $("#"+this.category+"_content").load(''+this.path+this.refs[i]+'/index.html', function(){
-      // //   //Upon load, remove mask
-      //   alert('loaded');
-      // //   $('#'+this.category+'_content').css('display','block').css('opacity',1);
-      // //   $('.loadmask').delay(200).animate({'opacity':0}, 1000, function(){$(this).css('display','none');})
-      // });
-      // alert('ok');
+      $("#"+cat+"_content").load(''+path+refs[i]+'/index.html', function(){
+      //Upon load, remove mask
+        $('#'+cat+'_content').css('display','block').css('opacity',1);
+        $('.loadmask').delay(200).animate({'opacity':0}, 1000, function(){$(this).css('display','none');})
+      });
     });
   }
 
