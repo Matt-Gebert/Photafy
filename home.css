@@ -120,9 +120,49 @@ body {
   padding:0px;
 }
 
+.subpage .subpagemenu{
+  border-right: solid 1px white;
+  overflow-y:auto;
+  background-color: rgba(204, 68, 0, 0.4);
+  display: table;
+  height:100%;
+  padding:0px;
+}
+
+.subpage .menuoption {
+  background-color:none;
+  vertical-align: middle;
+  transition:0.5s;
+  height:5%;
+  color:white;
+  font-family: 'Ubuntu', sans-serif;
+  display: table;
+  width:100%;
+  margin:0 auto;
+}
+
+.subpage .menuoption span {
+  padding-left: 20px;
+  width:100%;
+  height:100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.subpage .menuoption:hover {
+  background-color:rgba(255,255,255,0.8);
+  cursor:pointer;
+  color: #114455;
+}
+
+.subpage .viewport{
+  display:table;
+  position:relative;
+  opacity:1;
+  height:100%;
+}
 .subpage .loadmask{
   display:table;
-  position:absolute;
   width:100%;
   height: 100%;
   text-align: center;
@@ -155,37 +195,9 @@ body {
   width:100%;
 }
 
-.subpage .subpagemenu{
-  border-right: solid 1px white;
-  overflow-y:auto;
-  background-color: rgba(204, 68, 0, 0.4);
-  display: table;
-}
-
-.subpage .menuoption {
-  background-color:none;
-  vertical-align: middle;
-  transition:0.5s;
-  height:5%;
-  color:white;
-  font-family: 'Ubuntu', sans-serif;
-  display: table;
-  width:100%;
-  margin:0 auto;
-}
-
-.subpage .menuoption span {
-  padding-left: 20px;
-  width:100%;
-  height:100%;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.subpage .menuoption:hover {
-  background-color:rgba(255,255,255,0.8);
-  cursor:pointer;
-  color: #114455;
+.subpage .category {
+  display:none;
+  opacity:1;
 }
 /*--------------------------- Rotating SVG ----------------------------*/
 

@@ -27,7 +27,7 @@ function subpg(pgnum) {
   }
 
   //Secondly, reset old page header if already selected.
-  if (crnt_pg !== -1) {
+  if (crnt_pg != -1) {
     $('#' + ids[crnt_pg]).hover(function(){
       $(this).css('background-color','rgba(255,255,255,0.8)')
       .children().children('i').css('color','#114455')
@@ -37,6 +37,7 @@ function subpg(pgnum) {
       .children().children('i').css('color','#77EEEE')
       .parents().children('span').css('color','#FFFFFF');
     }).mouseout();
+    $('#cat_' + ids[crnt_pg]).css('display','none');
   }
 
   //Thirdly, keep track of selected page.
@@ -47,8 +48,11 @@ function subpg(pgnum) {
   }
 
   //Fourthly load subpage elements of new page:
-  $('.category#cat_'+ids[pgnum]).load('/'+ids[pgnum]+'/index.html');
-  alert('');
+  $('#cat_'+ids[pgnum]).load(ids[pgnum]+'/index.html', function(){
+    $(this).css('display','block');
+  });
+
+  // alert('/'+ids[pgnum]+'/index.html');
   // fill_page_options(pgnum);
 
 
@@ -56,8 +60,8 @@ function subpg(pgnum) {
   if (crnt_pg != -1) {
     //Generate specific page.
     $('.underline').css('background-color','rgba(255,255,255,0.8)');
-    $('.subpage').css('display','block');
-    $('.subpage').animate({opacity:1}, 500);
+    $('#category_container').css('display','block');
+    $('#category_container').animate({opacity:1}, 500);
     scrollTillTop('.links','.information');
     load_page(0);
 
@@ -65,37 +69,9 @@ function subpg(pgnum) {
     //Return to default view.
     $('.underline').css('background-color','rgba(0,0,0,0)');
     scrollTillTop('.space','.information');
-    $('.subpage').animate({opacity:0}, 1000, function(){$(this).css('display','none');})
+    $('#category_container').animate({opacity:0}, 1000, function(){$(this).css('display','none');})
   }
 };
-
-// --------------------- Selection Between pages --------------------------
-var refs =  {
-  christian:[],
-  physicist:[],
-  musician:[],
-  other:['primsalg', '15puzzle']
-};
-
-var names = {
-  christian:[],
-  physicist:[],
-  musician:[],
-  other:['Prims Algorithm', '14-15 Puzzle']
-};
-
-var pg_nums = { //TODO: Implement page tracking for each tab, and don't refresh on tab.
-  christian:-1,
-  physicist:-1,
-  musician:-1,
-  other:-1
-}
-
-var crnt_pg = -1;
-
-
-
-
 
 $(document).ready(function() {
   //On Doc Ready, Set the subpage height to a fixed amount.
