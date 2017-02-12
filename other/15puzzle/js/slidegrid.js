@@ -41,8 +41,8 @@ function Slidegrid(containerName) {
         //Works out height of Window and adds Container Elements.
         // var width = window.innerWidth,
             // height = window.innerHeight;
-        var width = $('#content').css('width').replace(/[^-\d\.]/g, '');
-        var height = $('#content').css('height').replace(/[^-\d\.]/g, '');
+        var width = $('#other_content').css('width').replace(/[^-\d\.]/g, '');
+        var height = $('#other_content').css('height').replace(/[^-\d\.]/g, '');
         var functionsBarHeight = height/10;
         height = height * 9 / 10;
         svg = container.append("svg")

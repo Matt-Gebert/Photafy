@@ -26,12 +26,13 @@
             var links = new LinkSet().polygonBasedSet(numNodes, 1); //secondParam = Probability of non-essential links.
 //            var linksCopy = new LinkSet().clone(links);
 
-            var names = [];
+            var node_names = [];
             for (var i = 1; i <= numNodes; i++) {
-               names.push(i);
+               node_names.push(i);
             }
 
-            g.setup(numNodes, links, names);
+            g.setup(numNodes, links, node_names);
+						
 //            links = linksCopy;
 
             //Test Of Binding Buttons.
