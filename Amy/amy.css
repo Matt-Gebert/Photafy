@@ -69,9 +69,13 @@ font-family: 'Caveat Brush', cursive;*/
 
 body {
   background-color: pink;
-  background:url('lost.jpg');
+  background:url('lost.jpg') no-repeat center center  fixed;
   background-size: 100%;
   overflow-x:hidden;
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 * {
@@ -119,6 +123,7 @@ body {
   animation-name: ckw;
   animation-duration: 1s;
   transform-origin: center;
+  -webkit-transform-origin: 100% 100% 0;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -126,20 +131,23 @@ body {
   animation-name: ckw;
   animation-duration: 2s;
   transform-origin: center;
+  -webkit-transform-origin: 0% 100% 0;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 #piece3 {
   animation-name: ckw;
   animation-duration: 3.2s;
-  animation-iteration-count: infinite;
   transform-origin: center;
+  -webkit-transform-origin: 0% 0% 0;
+  animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 #piece4 {
   animation-name: ckw;
   animation-duration: 5s;
-  transform-origin: center;
+  transform-origin: center; /*Firefox Support;*/
+  -webkit-transform-origin: 100% 0% 0; /*Chrome Support*/
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
