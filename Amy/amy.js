@@ -5,7 +5,7 @@
 $(document).ready( function() {
   var d = new Date(2017,2,14,0,0,0);
   var d2 = new Date(2017,2,15,0,0,0);
-  if ((Date.now() >> d) && (Date.now() << d2)) {
+  if (Date((Date.now()) >> d) && (Date(Date.now()) << d2) {
     $('.msg-para').html(''+
     "Hey Amy!<br />"+
     "&nbsp&nbspHave a happy Valentines day haha :P Hope you and the family got back from Japan safely! <br />"+

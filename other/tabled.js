@@ -38,7 +38,7 @@ function tabled(url, refs, names, category) {
       crnt_pg = i;
     }
 
-    //Create vars to escape namespace:
+    //Create vars to enter namespace below:
     var path = this.path;
     var refs = this.refs;
     var cat = this.category;
@@ -50,8 +50,10 @@ function tabled(url, refs, names, category) {
       //Start Loading new page
       $("#"+cat+"_content").load(''+path+refs[i]+'/index.html', function(){
       //Upon load, remove mask
-        $('#'+cat+'_content').css('display','block').css('opacity',1);
-        $('.loadmask').delay(200).animate({'opacity':0}, 1000, function(){$(this).css('display','none');})
+        $('#'+cat+'_content').css('opacity',1).css('display','block');
+        $('.loadmask').delay(200).animate({'opacity':0}, 1000, function(){
+          // $(this).css('display','none');
+        });
       });
     });
   }
