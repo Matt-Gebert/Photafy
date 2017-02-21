@@ -28,6 +28,8 @@ function tabled(url, refs, names, category) {
         }, function(){
           $(this).css('background-color','rgba(0,0,0,0)').css('color','#FFFFFF');
         }).mouseout();
+      } else {
+
       }
 
       //Mark new Selection menuoption:
@@ -44,15 +46,15 @@ function tabled(url, refs, names, category) {
     var cat = this.category;
 
     //2. Hide Current Content:
-    $('#'+cat+'_content').css('dispaly','none').css('opacity',0);
+    $('.content').css('opacity',0); //.css('dispaly','none') //:not(#'+cat+'_content)
     //Bring up loading mask.
-    $('.loadmask').css('display','table').animate({'opacity':1}, 400, function(){
+    $('.loadmask').css('display','block').animate({'opacity':1}, 400, function(){
       //Start Loading new page
       $("#"+cat+"_content").load(''+path+refs[i]+'/index.html', function(){
       //Upon load, remove mask
         $('#'+cat+'_content').css('opacity',1).css('display','block');
         $('.loadmask').delay(200).animate({'opacity':0}, 1000, function(){
-          // $(this).css('display','none');
+          $(this).css('display','none');
         });
       });
     });

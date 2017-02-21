@@ -47,14 +47,12 @@ function subpg(pgnum) {
     crnt_pg = pgnum;
   }
 
-  //Fourthly load subpage elements of new page:
-  $('#cat_'+ids[pgnum]).load(ids[pgnum]+'/index.html', function(){
-    $(this).css('display','block');
-  });
-
-  // alert('/'+ids[pgnum]+'/index.html');
-  // fill_page_options(pgnum);
-
+  //Fourthly load subpage elements of new page if not unselected:
+  if(crnt_pg != -1) {
+    $('#cat_'+ids[pgnum]).load(ids[pgnum]+'/index.html', function(){
+      $(this).css('display','block');
+    });
+  }
 
   //Lastly, change view between frontpage and specific page.
   if (crnt_pg != -1) {
@@ -86,5 +84,7 @@ $(document).ready(function() {
 
 //TODO: implement resize functionality for scrolling and scaling elements
 function resize_event() {
-
+  var pageBarHeight = $('.links').css('height').replace(/[^-\d\.]/g, '') + 2;
+  var subpageHeight = $(document).height() - pageBarHeight
+  $('.subpage').css('height', subpageHeight + 'px');
 }
