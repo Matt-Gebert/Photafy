@@ -155,6 +155,24 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+#piece5 {
+  animation-name: ckw;
+  animation-duration: 1.6s;
+  transform-origin: center; /*Firefox Support;*/
+  -webkit-transform-origin: 100% 0% 0; /*Chrome Support*/
+  -moz-transform-origin: center;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#piece6 {
+  animation-name: ckw;
+  animation-duration: 2.4s;
+  transform-origin: center; /*Firefox Support;*/
+  -webkit-transform-origin: 100% 0% 0; /*Chrome Support*/
+  -moz-transform-origin: center;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
 @keyframes ckw {
   0% {
