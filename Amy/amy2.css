@@ -83,13 +83,16 @@ body {
   white-space: nowrap;
 }
 
+/*TODO: ADJUST RESIZE JS FOR INSTANCES WHERE HEIGHT > WIDTH*/
+
 #vid_frame{
   height: 100%;
   width:100%;
   background-color: black;
   opacity: 1;
-  z-index: 12;
+  z-index: -1;
 }
+
 video {
   /*-webkit-transform: scaleX(1.2);*/
   /*-moz-transform: scaleX(1.2);*/
