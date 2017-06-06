@@ -18,6 +18,8 @@ $(document).ready(function() {
   //  var d2 = new Date(2017,2,15,0,0,0);
   //  if ((Date(Date.now()) >> d) && (Date(Date.now()) << d2)) {
 
+
+
 });
 
 function talkToAmy() {

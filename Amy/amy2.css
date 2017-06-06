@@ -84,6 +84,12 @@ body {
   white-space: nowrap;
 }
 
+#picture_frame{
+  z-index: 10;
+}
+
+
+
 /*TODO: ADJUST RESIZE JS FOR INSTANCES WHERE HEIGHT > WIDTH*/
 
 #vid_frame{
@@ -126,12 +132,11 @@ audio {
   z-index: 10;
 }
 
+
 .algnFrame {
   display:table;
   text-align: center;
 }
-
-
 
 .algnMiddle {
   display:table-cell;
