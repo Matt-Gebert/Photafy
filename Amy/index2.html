@@ -28,7 +28,7 @@
 </head>
 
 <body>
-  <div class="frame">
+  <div class="frame" id="messageFrame">
     <div class="row buffer"></div>
      <!-- INFORMATION TEXT -->
     <div class="row msg">
@@ -53,6 +53,11 @@
             </div>
             <div class="col-sm-1"></div>
             </div>
+            <div class="row" style="text-align: centre">
+            <div class="button" id="image_button" onclick=beginSlides()>
+              Checkout some images!
+            </div>
+          </div>
           </div>
       </div>
     </div>
@@ -60,11 +65,11 @@
   <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
   <div class="frame" id="vid_frame">
     <video poster="StarSky.gif" id="bgvid" playsinline muted loop>
-      <source src="StarSky720.mp4" type="video/mp4" />
+      <!-- <source src="StarSky720.mp4" type="video/mp4" /> -->
       <source src="StarSky720.mp4" type="video/mp4" />
     </video>
     <audio id="bgaud" loop >
-      <source src="uptownfunk.mp3" type="audio/mp3" />
+      <!-- <source src="uptownfunk.mp3" type="audio/mp3" /> -->
       <source src="cantstopthefeeling.mp3" type="audio/mp3" />
     </audio>
   </div>
@@ -107,6 +112,16 @@
     </div>
   </div>
   <div class="frame" id="picture_frame">
+    <img class="movingImg" id="img1" src=Graphics/17379821_1598705573480603_1874827878_o.jpg/>
+    <img class="movingImg" id="img2" src=Graphics/18620191_10156099194967977_5167214864964860005_n.jpg/>
+    <img class="movingImg" id="img3" src=Graphics/received_1583083485042812.jpeg/>
+    <img class="movingImg" id="img4" src=Graphics/received_1585183338166160.jpeg/>
+    <div style="display: table; position:absolute; width:100%; height:100%">
+      <div style="display: table-cell; vertical-align: middle; text-align:center">
+        <div class="button" id="message_button" onclick=returnToMessage() style="margin-left: auto; margin-right:auto;">
+          Lets go Back!</div>
+      </div>
+    </div>
   </div>
 
 

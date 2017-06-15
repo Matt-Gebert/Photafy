@@ -14,78 +14,196 @@ document.onkeydown = function(evt) {
 };
 
 $(document).ready(function() {
-  loadSlides();
+  // talkToAmy();
+  // beginSlides();
+  // loadSlides();
 });
 
 /* ------------------------Slideshow Functionality ----------------------------------*/
 
+var viewportWidth = window.innerWidth;//$(document).width();
+var viewportHeight = window.innerHeight;//$(document).height();
 
-//TODO: THIS WILL NOT WORK SO DON'T BOTHER MATT HAHA - NEED TO BE RUNNING A SEVER............
-function loadSlides() {
-  var loc = window.location.pathname;
-  var dir = loc.substring(0, loc.lastIndexOf('/'));
-  var folder = "file://" + dir + "/";
+var db_img_count = 4;
 
-  $.ajax({
-    url : folder,
-    success: function (data) {
-      alert("test");
-      $(data).find("a").attr("href", function (i, val) {
-        if( val.match(/\.(jpe?g|png|gif)$/) ) {
-          $("body").append( "<img src='"+ folder + val +"'>" );
-          alert(val);
-        }
-      });
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-      // jqXHR Codes defined at https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
-      alert("FAILED:\t"+jqXHR.status+"\nStatus:\t" + textStatus + "\n\nError Thrown:\t" + errorThrown);
-    }
-  });
+var animationTurn = 0;
+function animateImg(im) {
+  var localAnimation = animationTurn; //Copy local animation.
 
+  animationTurn = animationTurn + 1;
+  if (animationTurn > 7) {
+    animationTurn = 0;
+  };
+
+  // alert("animating image...");
+  //Get img width and height.
+  var imgWidth = parseInt(im.css("width"));//width();
+  var imgHeight = parseInt(im.css("height"));//height();
+  // //Apply local animation.
+  var set = animationSet[localAnimation];
+  im.css('display','block');
+  im.css('left',""+(set["xi"] + imgWidth*set["xii"])+"px") //Position
+    .css('top',""+(set["yi"] + imgHeight*set["yii"])+"px")
+    .animate({ //Animate image.
+      'left':""+(set['xf'] + imgWidth*set["xfi"])+"px",
+      'top':""+(set['yf'] + imgHeight*set["yfi"])+"px"
+    }, set['duration']
+    , "linear"
+    , function(){
+      // alert("Animation Finished");
+      animateNext();
+    });
 };
+
+var runSlides = false;
+var picNum = 1;
+function animateNext() {
+  // alert("animating next!");
+  if (picNum > db_img_count) {
+    picNum = 1;
+  };
+  if(runSlides) {
+    animateImg($("#img" + picNum));
+    picNum = picNum + 1;
+  }
+};
+
+function animateSlides() {
+  // initialise animation of slides
+  var i = 0;
+  for (i=0; i<2; i++) { // i<X --> X Determines how many slides run at once.
+    animateNext();
+  };
+};
+
 
 function beginSlides() {
+  $('#picture_frame').css('display','block').css('opacity',1);
+  $('#vid_frame').delay(200).animate({'opacity':0},2000,function(){$(this).css('display','none');});
+  $('#messageFrame').delay(200).animate({'opacity':0},2000,function(){$(this).css('display','none');});
+  runSlides = true;
+  animateSlides();
+};
 
+function returnToMessage() {
+  $('#picture_frame').delay(200).animate({'opacity':0},2000,function(){$(this).css('display','none');});
+  $('#vid_frame').delay(200).css('display','block').animate({'opacity':1},2000);
+  $('#messageFrame').delay(200).css('display','block').animate({'opacity':1},2000);
+  runSlides = false;
 };
 
 
-// /* ---------------------KEYPRESS FUNCTION EVENT FOR KONAMI -----------------------------------*/
-// function codeCheck() {
-//   var keyd = true;
-//   for (var i=0; i < 10; i++) {
-//       if (track[i] != konami[i])
-//           keyd = false;
-//   };
-//     if (keyd) {
-//       alert("test");
-//       // talkToAmy();
-//     }
-// };
-//
+/* ---------------------KEYPRESS FUNCTION EVENT FOR KONAMI -----------------------------------*/
+function codeCheck() {
+  var keyd = true;
+  for (var i=0; i < 10; i++) {
+      if (track[i] != konami[i])
+          keyd = false;
+  };
+    if (keyd) {
+      // alert("test");
+      talkToAmy();
+    }
+};
+
 // /* --------------------- Functions to control Video Content -------------------------- */
 //
-// function playAudioVideo() {
-//     //VIDEO
-//     // var vid = $("video");
-//     var vid = $("#bgvid");
-//     vid[0].playbackRate = 1;
-//     vid[0].play();
-//
-//     //AUDIO
-//     var aud = $("#bgaud");
-//     aud[0].volume = 0.5;
-//     aud[0].play();
-// };
+function playAudioVideo() {
+    //VIDEO
+    // var vid = $("video");
+    var vid = $("#bgvid");
+    vid[0].playbackRate = 1;
+    vid[0].play();
+
+    //AUDIO
+    var aud = $("#bgaud");
+    aud[0].volume = 0.5;
+    aud[0].play();
+};
 //
 // /*----------------------------- Special Functions ---------------------------------------*/
-// function talkToAmy() {
-//
-//     $('.msg-para').html(''+
-//     "Hey Amy!<br />"+
-//     "&nbsp")
-//
-//     $('#load_frame').delay(1000).animate({'opacity':0},2000,function(){$(this).css('display','none');});
-//     playAudioVideo();
-//   }
-// };
+function talkToAmy() {
+
+    $('.msg-para').html(''+
+    "Hey Amy!<br />"+
+    "&nbsp")
+
+    $('#load_frame').delay(1000).animate({'opacity':0},2000,function(){$(this).css('display','none');});
+    playAudioVideo();
+  };
+
+
+/* ---------------------------------- ANIMATION SET DEFINED ---------------------------------*/
+var animationSet = {
+  0:{ //Top left to bottom right
+    'duration':10000,
+    'xi':0,'yi':0,
+    'xf':viewportWidth,
+    'yf':viewportHeight,
+    'xii':-1,'xfi':0,
+    'yii':-1,'yfi':0,
+    },
+  7:{ //Top right to bottom left
+    'duration':7000,
+    'xi':viewportWidth,
+    'yi':0,
+    'xf':0,
+    'yf':viewportHeight,
+    'xii':0,'xfi':-1,
+    'yii':-1,'yfi':0,
+  },
+  2:{ //Bottom right to top left
+    'duration':8000,
+    'xi':viewportWidth,
+    'yi':viewportHeight,
+    'xf':0,
+    'yf':0,
+    'xii':0,'xfi':-1,
+    'yii':0,'yfi':-1,
+    },
+  4:{ //Bottom left to top right
+    'duration':5000,
+    'xi':0,
+    'yi':viewportHeight,
+    'xf':viewportWidth,
+    'yf':0,
+    'xii':-1,'xfi':0,
+    'yii':0,'yfi':-1,
+    },
+  3:{ //Middle Lower, Left to right
+    'duration':8000,
+    'xi':0,
+    'yi':viewportHeight*3/4,
+    'xf':viewportWidth,
+    'yf':viewportHeight*3/4,
+    'xii':-1,'xfi':0,
+    'yii':-0.5,'yfi':-0.5
+    },
+  6:{ //Middle Left, Top to Bottom
+    'duration':9000,
+    'xi':viewportWidth*1/4,
+    'yi':0,
+    'xf':viewportWidth*1/4,
+    'yf':viewportHeight,
+    'xii':-0.5,'xfi':-0.5,
+    'yii':-1,'yfi':0
+    },
+  5:{ //Middle Top, Right to left
+    'duration':8000,
+    'xi':viewportWidth,
+    'yi':viewportHeight*1/4,
+    'xf':0,
+    'yf':viewportHeight*1/4,
+    'xii':0,'xfi':-1,
+    'yii':-0.5,'yfi':-0.5
+    },
+  1:{ //Middle Right, Bottom to Top
+    'duration':4000,
+    'xi':viewportWidth*3/4,
+    'yi':viewportHeight,
+    'xf':viewportWidth*3/4,
+    'yf':0,
+    'xii':-0.5,'xfi':-0.5,
+    'yii':0,'yfi':-1
+    },
+};
