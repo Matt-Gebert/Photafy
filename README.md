@@ -1,4 +1,6 @@
 # Photafy
 
-Welcome to the Git Repository for my personal website!
-Contents:
+Git Repository for a personal website!
+
+This repository is **no longer maintained**. A django version of this website can be found at [mattgebert/djangoPhotafy](https://github.com/mattgebert/djangoPhotafy).
+
